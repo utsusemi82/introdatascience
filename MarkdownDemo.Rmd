@@ -1,0 +1,76 @@
+---
+title: "Markdown Demo (Modified)"
+author: "Cher Jia Wen"
+date: "5/26/2022"
+output:
+  pdf_document: default
+  word_document: default
+  html_document: default
+---
+
+# My First knitr document
+
+# Cher Jia Wen
+
+## Introduction
+
+**Markdown** is a very basic and easy-to-use syntax for styling written documents. It's very easy to make some words **bold** and other words *italic* with Markdown. You can even [link to FCSIT](http://www.fsktm.um.edu.my)!
+
+**Here is a code chunk and it prints the code and result.**
+
+```{r}
+set.seed(1)
+x <- rnorm(100)
+mean(x)
+```
+
+*Here is a code chunk but it only print the result.*
+
+```{r, echo=FALSE}
+set.seed(10)
+x <- rnorm(100)
+mean(x)
+```
+
+Here is a code chunk but it doesn't print anything!!!
+
+```{r, echo=FALSE, results="hide"}
+set.seed(10)
+x <- rnorm(100)
+mean(x)
+```
+
+Inline text computation
+
+```{r, echo=FALSE}
+time <-format(Sys.time(), "%a %b %d %X %Y")
+```
+
+### The current time is `r time`.
+
+```{r}
+summary(cars)
+```
+
+You can also embed plots, for example:
+
+```{r, echo=FALSE}
+plot(cars)
+```
+
+Add another R code chunk for a different plot:
+
+```{r echo = FALSE}
+library(plotrix)
+slices <- data.frame(Numbers = c(10,35,18,8,3), 
+                     Status = c("Professors","Associate Professors","Senior Lecturers","Lecturers","Tutors"))
+fan.plot(slices$Numbers, labels = paste(slices$Status, slices$Numbers, sep = " - "), 
+         main = "Fan Plot - Number of Academician by Status")
+
+```
+
+Add image:
+
+```{r pressure, echo=FALSE, fig.cap="A caption", out.width = '100%'}
+knitr::include_graphics("https://keukenhof.nl/wp-content/uploads/park74-720x405-c-default.jpg")
+```

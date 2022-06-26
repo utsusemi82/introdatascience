@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Flight Price Tracker (by Team3 Fanstastic Four)</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Sim Jia Hong (U2005316), Pua Zhi Xian (U2005293), Cher Jia Wen (U2005415), Tan Jia Chyi (17205011)" />
+    <script src="index_files/header-attrs-2.14/header-attrs.js"></script>
+    <link href="index_files/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link rel="stylesheet" href="tamu.css" type="text/css" />
+    <link rel="stylesheet" href="tamu-fonts.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Flight Price Tracker (by Team3 Fanstastic Four)
+]
+.subtitle[
+## WIE2003 Introduction to Data Science
+]
+.author[
+### Sim Jia Hong (U2005316), Pua Zhi Xian (U2005293), Cher Jia Wen (U2005415), Tan Jia Chyi (17205011)
+]
+
+---
+
+
+class: inverse, center, middle
+background-image: url(https://i.imgur.com/VCyLJx2.png)
+background-size: contain
+---
+
+
+## Introduction
+
+This shiny app is implemented to track the price of flight.
+
+### Problem Statements
+
+- How do consumers evaluate the prices of domestic flights offered by multiple airlines in India to get the most affordable option?
+
+### Solution
+
+- Flight Price Tracker is created to allow consumers to check and compare the domestic flight prices from multiple airlines in India so that they can select the cheapest flight price.
+
+### GitHub link to the Shiny App
+
+- [Flight Price Tracker](https://github.com/jiahongggg/WIE2003-Data-Science.git)
+
+---
+
+## Stakeholder and Functions of Apps
+
+### Stakeholder
+- Malaysian who would travel domestically in India. 
+
+### Functions
+- Able to set range of price to filter the data of flight.
+- Able to sort the data of flight based on conditions.
+- Provide prices of flight from multiple airlines which allow consumers to do flight price comparison easily.
+- Provide flight details (i.e. time departure, duration and etc)
+- Only focus on the domestic flights in India which is more user-friendly for those who want to travel domestically in India.
+
+### Summary of Experience using the App
+- When we were developing the flight price tracker, we faced some challenges in scraping real time data from the website. Therefore, we decided to use online flight price dataset from Kaggle. In short, we gained knowledge in developing shiny apps and doing a presentation slides using Slidify. It is very useful to use R studio to develop shiny apps and presentation slides.
+
+---
+
+## Data Science Process
+
+### 1. Asking a Question
+- Identify the current issues faced by people when searching for flight ticket
+
+### 2. Finding &amp; Getting Data from Kaggle
+- [Flight Price Tracker Dataset](https://www.kaggle.com/datasets/shubhambathwal/flight-price-prediction)
+- It contains information about flight booking options from "Easemytrip" website to travel between India's top 6 metro cities. 
+- The features of dataset include airline, flight code, source city, departure and arrival time, number of stops, destination city, class, duration and price. 
+
+### 3. Cleaning Data
+- To fix incomplete and duplicated data
+
+### 4. Analyzing Data
+- To analyse the data using EDA
+
+### 5. Presenting Data
+- Data is used to complete the flight tracker application in the form of shiny apps
+
+---
+
+## Screenshot of Flight Price Tracker
+
+
+
+---
+
+## Key takeaways
+
+We learned a lot of useful knowledge after completing the flight price tracker application. First of all, finding relevant dataset online to analyze and use it for the price tracker. However, not all the datasets online are suitable, hence we tried many datasets and are able to find the most suitable dataset. Secondly, we learned how to carry out the relevant EDA for data visualization. The purpose of us doing EDA is to provide a clear vision on what is the data all about. Lastly, the most challenging part is to develop the application, we refer to many resources online and watch videos so that we are able to develop our own flight price tracker application. Last but not least, we would like to sincerely thanks Dr Salimah for guiding us throughout the whole process by answering our questions patiently.
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create();
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
